@@ -77,7 +77,11 @@
                 </fieldset>
                 <fieldset class="formulario__campo">
                     <label class="campo__etiqueta" for="cpf">CPF (apenas números)</label>
-                    <input name="cpf" id="cpf" class="campo__escrita campo__escrita--menor" type="text" minlength="11" maxlength="14" required/>
+                    <input name="cpf" id="cpf" class="campo__escrita campo__escrita--menor" type="text" minlength="11" maxlength="14" required pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"/>
+                    <!-- o trecho \d{3}\ agrupa um número de 0 a 9 por três vezes;
+                    o trecho .? indica que o grupo de dígitos poderá ser seguido por um ponto, onde o ? indica que esse critério é opcional.
+                    o trecho -? indica que o grupo de dígitos poderá ser seguido por um traço, critério que também é opcional.
+                    o trecho final \d{2} agrupa um número de 0 a 9 por duas vezes. -->
                     <span class="mensagem-erro"></span>
                 </fieldset>
                 <fieldset class="formulario__campo">
